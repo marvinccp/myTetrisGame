@@ -14,7 +14,6 @@ import { StyledTetris, StyledTetrisWrapper } from "./styles/StyledTetris";
 //custom hooks
 import { usePlayer } from "../hooks/usePlayer";
 import { useStage } from "../hooks/useStage";
-import { keyframes } from "styled-components";
 
 const Tetris = () => {
   const [dropTime, setDropTime] = useState(null);
@@ -75,7 +74,7 @@ const Tetris = () => {
               <Display text={"Level"} />
             </div>
           )}
-          <StartButton  />
+          <StartButton start={startGame} />
         </aside>
       </StyledTetris>
     </StyledTetrisWrapper>
