@@ -27,7 +27,7 @@ const Tetris = () => {
   //specific player functions
 
   const moverPlayer = (dir) => {
-    updatePlayerPos({ x: dir, y: 0 });
+    updatePlayerPos({ x: dir, y: 0});
   };
 
   const startGame = () => {
@@ -54,6 +54,7 @@ const Tetris = () => {
         dropPLayer()
       }
     }
+    console.log(keyCode)
   };
 
   return (
