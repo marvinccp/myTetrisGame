@@ -23,10 +23,7 @@ const Tetris = () => {
 
   const [player, updatePlayerPos, resetPlayer, playerRotate] = usePlayer();
   const [stage, setStage, rowsCleared] = useStage(player, resetPlayer);
-  const [score, setScore, rows, setRows, level, setLevel] =
-    useGameStatus(rowsCleared);
-
-  console.log("re-render");
+  const [score, setScore, rows, setRows, level, setLevel] = useGameStatus(rowsCleared);
 
   //specific player functions
 
@@ -79,13 +76,12 @@ const Tetris = () => {
     if (!gameOver) {
       if (keyCode === 40) {
         setDropTime(1000 / (level + 1) + 200);
-        console.log("inter on");
       }
     }
   };
 
   const dropPLayer = () => {
-    console.log("inter off");
+    
     setDropTime(null);
     drop();
   };
@@ -102,7 +98,7 @@ const Tetris = () => {
         playerRotate(stage, 1);
       }
     }
-    console.log(keyCode);
+
   };
 
   useInterval(() => {
@@ -127,7 +123,7 @@ const Tetris = () => {
           }}
         >
           <h2 style={{ color: "white", fontFamily: "Pixel" }}>
-            Tetris <h style={{ fontSize: "1rem" }}>Weibenfalk version</h>
+            Tetris <span style={{ fontSize: "1rem" }}>Weibenfalk version</span>
           </h2>
           <p
             style={{
